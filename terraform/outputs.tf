@@ -7,3 +7,8 @@ output "rds_endpoint" {
   description = "RDSの接続用エンドポイント"
   value       = aws_db_instance.main.endpoint
 }
+
+output "alb_dns_name" {
+  description = "ALBのURL (ブラウザでアクセス)"
+  value       = "http://${aws_lb.main.dns_name}"
+}
